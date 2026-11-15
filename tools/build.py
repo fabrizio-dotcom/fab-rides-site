@@ -49,6 +49,7 @@ def page(slug, title, desc, body):
       <ul>
 {links}
         <li><a class="ext" href="{FFFN}">Field Notes</a></li>
+        <li><a href="https://example.com">Test</a></li>
       </ul>
     </nav>
   </div>
