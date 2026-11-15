@@ -19,6 +19,12 @@ NAV = [("index.html", "Home"), ("ride.html", "Ride"), ("climb.html", "Climb"), (
        ("where-we-gather.html", "Where We Gather"), ("join.html", "Join Us")]
 
 
+import hashlib
+
+# Changes whenever site.css changes, so browsers never keep an old stylesheet.
+CSS_VERSION = hashlib.sha256((OUT / "assets" / "site.css").read_bytes()).hexdigest()[:10]
+
+
 def page(slug, title, desc, body):
     cur = ' aria-current="page"'
     links = "\n".join(
@@ -38,7 +44,7 @@ def page(slug, title, desc, body):
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="{LOGO}">
 <link rel="preload" href="assets/fonts/barlow-condensed-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="assets/site.css">
+<link rel="stylesheet" href="assets/site.css?v={CSS_VERSION}">
 </head>
 <body>
 <a class="skip" href="#content">Skip to content</a>
