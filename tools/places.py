@@ -248,20 +248,16 @@ PLACES = {
                 "or Chiesa in Valmalenco.",
                 "Touring with us is for confident intermediate ski tourers with their full kit. It isn&rsquo;t for beginners.",
             ]),
-            ("Guides and responsibility", [
+            ("Guides", [
                 "Want a guide? We&rsquo;ll put you in touch with qualified mountain guides: our first choice is Stefano Pizzagalli, "
-                "and we know the other good ones in the valley. Or join us as part of an experienced group.",
-                "We don&rsquo;t guide: everyone is responsible for themselves and makes their own final call, "
-                "and we may ask you not to join a tour that isn&rsquo;t right for you.",
+                "and we know the other good ones in the valley.",
             ]),
             ("Safety", [
                 "We read the avalanche bulletin every day and choose the route around it. We practise transceiver searches together. "
                 "Everyone brings full kit in good working order: transceiver, probe, shovel and skins.",
             ]),
         ],
-        "draft": [
-            "Liability wording under &ldquo;Guides and responsibility&rdquo;: validate with legal counsel before it goes live.",
-        ],
+        "draft": [],
     },
     "lake-como": {
         "name": "Lake Como",
