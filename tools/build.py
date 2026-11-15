@@ -271,7 +271,8 @@ join = head("Join the Community", "No membership form. No subscription. No perfo
 <div class="prose">
 <h2>How It Works</h2>
 <p>Fab Rides runs on a Signal group (<a href="https://fabrizio.deliberali.com/idea1">we don&rsquo;t use WhatsApp</a>), word of mouth, and the field notes that go out every Friday. When a session is happening, it&rsquo;s announced. You join if you can. Simple.</p>
-
+<h3>Costs, kept honest</h3>
+<p>Fab Rides isn&rsquo;t here to make a profit. When a day or a trip has real costs, we share them fairly: travel and logistics, the courses and qualifications that keep us safe, and the time it takes to plan things properly. Covering those costs keeps Fab Rides going. Creating value for the people who come along is the reason we do it.</p>
 <h3>The Weekly Rhythm</h3>
 </div>""" + table(["Day", "Activity", "Where", "Who"], [
     ["<strong>Mon, Wed, Fri evenings</strong>", "Indoor climbing", "Parthian Southampton", "All levels"],
