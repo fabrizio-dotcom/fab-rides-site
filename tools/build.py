@@ -140,7 +140,7 @@ ride = head("Ride", "Social mountain biking. No egos. No drop rides. Just good t
 <li><strong>Post-ride:</strong> Pub stop or coffee. Half the relationship-building happens after the ride.</li>
 </ul>
 </div>""") + section("<h2>Where We Ride</h2>" + places([
-    ("Queen Elizabeth Country Park", "Local anchor", "Our home trails. Flow tracks, pump track, proper enduro descents. 20 minutes from Winchester, the go-to for Friday mornings and Sunday rides."),
+    ("Queen Elizabeth Country Park", "Local anchor", "Our home trails. Flow tracks, pump track, proper enduro descents. 40 minutes from Winchester, the go-to for Friday mornings and Sunday rides."),
     ("Surrey Hills", "Destination day", "Technical singletrack, chalky climbs, best riding in the South East. Regular Saturday destination days. Carpools from Winchester."),
     ("Winchester", "Local &middot; Weekday", "Training loops from St Catherine&rsquo;s Hill or the Lainston House area. Quick Friday or Tuesday sessions."),
     ("Valtellina, Alps", "Community trips", "Our Alpine base. 50+ routes, proper mountain terrain. Seasonal community trips, typically late summer. Open to all."),
