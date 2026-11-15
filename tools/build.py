@@ -181,7 +181,7 @@ climb = head("Climb", "Indoor walls and outdoor crags. Building strength, techni
 <p>Climbing strips everything down to essentials. You, the rock, and the problem in front of you. There&rsquo;s no hiding from your weaknesses. No shortcuts. Just honest feedback about where you are and what you need to work on.</p>
 <p>It&rsquo;s also deeply social. Belaying requires trust. Beta-sharing builds connection. Celebrating sends creates community. We climb together because it makes us better, as climbers and as people.</p>
 <h2 data-gap>The Journey</h2>
-<p>I&rsquo;m currently climbing at 6c onsight and 7a+ redpoint, working toward 7b onsight as a 2026 goal, with 8a redpoint on the longer horizon. I&rsquo;m also pursuing my International Mountain Leader qualification. I share this not as credentials but as context: I&rsquo;m on a journey too, and you&rsquo;re welcome to join wherever you are on yours.</p>
+<p>I&rsquo;m currently climbing at 6c onsight and 7a+ redpoint, working toward 7b onsight as a 2026 goal, with 8a redpoint on the longer horizon. I&rsquo;m a qualified Mountain Leader, working towards the Rock Climbing Instructor award and logging days for my International Mountain Leader. Next year&rsquo;s trips to Bergen and Karpathos, and days in the Alps like this year&rsquo;s via ferratas and wild camps in the Schiara, are part of that log. I share this not as credentials but as context: I&rsquo;m on a journey too, and you&rsquo;re welcome to join wherever you are on yours.</p>
 <p>Whether you&rsquo;re touching plastic for the first time or projecting your hardest grade, there&rsquo;s space here.</p>
 </div>""") + section("""
 <h2>Session Types</h2>
