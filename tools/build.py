@@ -1,7 +1,10 @@
 #!/usr/bin/env python3
-"""Builds the Fab Rides static site into ../site/ (shared header/footer, 6 pages).
+"""Builds the Fab Rides static site into ../site/ (shared header/footer, 6 pages + one page per place).
+Place content lives in tools/places.py.
 site/assets/site.css is edited by hand; every HTML page is generated from this file."""
 from pathlib import Path
+
+from places import LINKS, PLACES
 
 OUT = Path(__file__).resolve().parent.parent / "site"
 WP = "https://fab-rides.co.uk/wp-content/uploads"
@@ -70,11 +73,21 @@ def head(title, sub):
     return f"""<div class="page-head"><div class="wrap"><h1>{title}</h1><p>{sub}</p></div></div>"""
 
 
+def place_url(name):
+    return f"place-{LINKS[name]}.html"
+
+
 def places(items):
-    cards = "\n".join(
-        f'<div class="card place"><span class="tag">{tag}</span><h4>{name}</h4><p>{text}</p></div>'
-        for name, tag, text in items)
-    return f'<div class="grid">{cards}</div>'
+    cards = []
+    for name, tag, text in items:
+        if name in LINKS:
+            title = f'<h4><a href="{place_url(name)}">{name}</a></h4>'
+            short = "QECP" if name.startswith("Queen Elizabeth") else name.split(" / ")[0].split(",")[0]
+            more = f'<a class="more" href="{place_url(name)}">More about {short} &rarr;</a>'
+        else:
+            title, more = f"<h4>{name}</h4>", ""
+        cards.append(f'<div class="card place"><span class="tag">{tag}</span>{title}<p>{text}</p>{more}</div>')
+    return f'<div class="grid">{"".join(cards)}</div>'
 
 
 def table(headers, rows):
@@ -221,6 +234,7 @@ gather = head("Where We Gather", "Fab Rides doesn&rsquo;t have a headquarters. I
 <div class="prose">
 <h2>Winchester, Home Base</h2>
 <p>Winchester is where most of us start. The city sits at the edge of good terrain: 40 minutes from Queen Elizabeth Country Park, an hour and a half from the Surrey Hills and from Portland. For rides, we typically meet at the QECP car park or at Fab&rsquo;s cave for local loops in West Wood. For climbing, the Southampton wall on Friday mornings is the default.</p>
+<p><a href="place-winchester.html">More about riding from Winchester &rarr;</a></p>
 <p>After most sessions: either the pub nearest the trailhead, or coffee somewhere on the way back. The debrief is non-negotiable.</p>
 </div>""") + section("<h2>South East England</h2>" + places([
     ("Queen Elizabeth Country Park", "MTB &middot; Hampshire", "Our local anchor. Flow trails, pump track, and enduro descents. The Friday morning default and regular Sunday venue. Car park meetup, confirmed per ride via Signal."),
@@ -237,7 +251,7 @@ gather = head("Where We Gather", "Fab Rides doesn&rsquo;t have a headquarters. I
 ])) + section("""
 <div class="prose">
 <h2>Beyond Europe</h2>
-<p>Fab Riders go further when the right opportunity comes together. In 2025, a group of us raced Wines2Whales in South Africa: three days of MTB through the Winelands. The organisers, the culture, the people were all exceptional. We&rsquo;re building the foundation to return stronger, this time with a bigger Winchester and Dolomites contingent.</p>
+<p>Fab Riders go further when the right opportunity comes together. In 2025, a group of us raced <a href="place-wines2whales.html">Wines2Whales</a> in South Africa: three days of MTB through the Winelands. The organisers, the culture, the people were all exceptional. We&rsquo;re building the foundation to return stronger, this time with a bigger Winchester and Dolomites contingent.</p>
 <p>International trips happen when the right group and the right event align. If you&rsquo;re interested in future adventures, <a href="join.html">get in touch</a>.</p>
 </div>""") + section("""
 <div class="prose">
@@ -297,6 +311,28 @@ PAGES = {
     "join.html": ("Join Us | Fab Rides", "No membership form. No subscription. Just show up and see if this feels like your kind of people.", join),
     "404.html": ("Page not found | Fab Rides", "Page not found.", notfound),
 }
+
+
+
+def place_page(p):
+    facts = "".join(f"<div><dt>{k}</dt><dd>{v}</dd></div>" for k, v in p["facts"])
+    body = (f'<div class="page-head"><div class="wrap"><p class="eyebrow"><a href="where-we-gather.html">Where We Gather</a></p>'
+            f'<h1>{p["name"]}</h1><p>{p["tagline"]}</p></div></div>')
+    if p.get("draft"):
+        qs = "".join(f"<li>{q}</li>" for q in p["draft"])
+        body += section(f'<div class="draft-note"><p class="eyebrow">Draft for Fab to review</p>'
+                        f'<p>Questions to answer before this page goes live:</p><ul class="list">{qs}</ul></div>')
+    body += section(f'<dl class="facts">{facts}</dl>')
+    prose = "".join(f"<h2>{h}</h2>" + "".join(f"<p>{x}</p>" for x in paras) for h, paras in p["sections"])
+    body += section(f'<div class="prose">{prose}</div>')
+    body += section('<div class="callout"><h3>Come along</h3><p>Sessions and trips are announced in the Signal group. '
+                    'Get in touch and we&rsquo;ll add you.</p><div class="btn-row"><a class="btn" href="join.html">Join Us &rarr;</a>'
+                    '<a class="btn ghost" href="where-we-gather.html">All places</a></div></div>')
+    return body
+
+
+for key, p in PLACES.items():
+    PAGES[f"place-{key}.html"] = (f'{p["name"]} | Fab Rides', p["tagline"].replace("&rsquo;", "’"), place_page(p))
 
 for slug, (title, desc, body) in PAGES.items():
     (OUT / slug).write_text(page(slug, title, desc, body), encoding="utf-8")

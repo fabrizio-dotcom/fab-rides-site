@@ -120,6 +120,8 @@ for page in pages:
     visible = re.sub(r"<[^>]+>", " ", html)
     if re.search(r"(\+44|\+39|\b0)\s?\d{2,4}[\s-]?\d{3}[\s-]?\d{3,4}\b", visible):
         errors.append(f"{n}: looks like a phone number; never publish phone numbers")
+    if 'class="draft-note"' in html:
+        errors.append(f"{n}: draft questions still on the page; answer them in tools/places.py before merging")
     if 'name="robots" content="noindex, nofollow"' not in html:
         errors.append(f"{n}: noindex removed; allowed only at the domain switch, with Fabrizio's approval")
 
