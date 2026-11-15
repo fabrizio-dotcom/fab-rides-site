@@ -18,7 +18,7 @@ LINK_DOMAINS = {
     "signal.org", "parthianclimbing.com", "www.epic-series.com", "www.in-lombardia.it",
 }
 # Hosts allowed to serve images (old WordPress, until the images move into site/assets).
-IMAGE_HOSTS = {"fab-rides.co.uk"}
+IMAGE_HOSTS = set()
 FORBIDDEN_TAGS = {"script", "iframe", "form", "object", "embed", "frame", "frameset", "base"}
 REQUIRED_HEADERS = ["default-src 'none'", "frame-ancestors 'none'", "form-action 'none'", "X-Content-Type-Options: nosniff"]
 EXPECTED_REDIRECTS = {"/feed / 301", "/wp-admin / 301", "/wp-login.php / 301"}
@@ -38,9 +38,11 @@ class Page(HTMLParser):
         self.tags.append(tag)
         if tag == "a" and a.get("href"):
             self.links.append(a["href"])
-        for k in ("src", "srcset", "poster", "data"):
+        for k in ("src", "poster", "data"):
             if a.get(k):
                 self.srcs.append(a[k])
+        if a.get("srcset"):
+            self.srcs.extend(part.strip().split()[0] for part in a["srcset"].split(",") if part.strip())
         if tag == "link" and a.get("href"):
             self.srcs.append(a["href"])
         if "style" in a:
