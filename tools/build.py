@@ -58,7 +58,7 @@ def page(slug, title, desc, body):
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    <span>&copy; 2026 Fab Rides &middot; Winchester &amp; the Alps &middot; Run by Fab Campaigns Ltd</span>
+    <span>&copy; 2026 Fab Rides &middot; Winchester &amp; the Alps &middot; Run by Fab Campaigns Ltd, registered in England and Wales, company no. 10302961</span>
     <span><a href="join.html">Get in touch</a> &middot; <a href="https://www.facebook.com/FabMTBRides/">Facebook</a> &middot; <a href="{FFFN}">Fab&rsquo;s Friday Field Notes</a></span>
   </div>
 </footer>
@@ -102,7 +102,7 @@ home = f"""
 <div class="prose">
 <h2>What We Believe</h2>
 <p>The most profound insights arrive in motion. Not in meeting rooms. Not on screens. Through the physical reality of shared effort: grinding up a climb together, belaying someone through their crux move, reading the mountain before the weather turns.</p>
-<p>Fab Rides isn&rsquo;t a club. It isn&rsquo;t a business. There are no clients here, only fellow adventurers. No transactions, only shared experiences. <em>Pochi ma buoni.</em> Few but good.</p>
+<p>Fab Rides isn&rsquo;t a club, and it isn&rsquo;t about making money. There are no clients here, only fellow adventurers. What we trade is time, effort and stories. <em>Pochi ma buoni.</em> Few but good.</p>
 <blockquote>Real adventure takes you out of your comfort zone with no idea of what the outcome will be.</blockquote>
 </div>""") + section("""
 <h2>What We Do</h2>
@@ -121,7 +121,7 @@ home = f"""
 <div class="btn-row"><a class="btn ghost" href="where-we-gather.html">See Where We Gather &rarr;</a><a class="btn" href="join.html">Join the Community &rarr;</a></div>""") + section(f"""
 <div class="prose">
 <h2>Fab Riders</h2>
-<p>Fab Riders is the name for all of us: friends new and old who share this ethos. The community has taken us from Winchester&rsquo;s muddy cattle-field crags to a stage race in South Africa, from family cyclocross sessions to multi-pitch routes in the Dolomites.</p>
+<p>Fab Riders is the name for all of us: friends new and old who share this ethos. The community has taken us from Hampshire trails to a stage race in South Africa, from family cyclocross sessions to multi-pitch routes in the Dolomites.</p>
 <p>The adventures feed directly into the writing. Each Friday, experiences from our rides, crags, and mountains find their way into <strong>Fab&rsquo;s Friday Field Notes</strong>.</p>
 <div class="btn-row"><a class="btn ghost" href="{FFFN}">Read Fab&rsquo;s Friday Field Notes &rarr;</a></div>
 </div>""")
