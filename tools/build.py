@@ -33,7 +33,6 @@ def page(slug, title, desc, body):
 <meta property="og:image" content="{HERO}">
 <meta property="og:site_name" content="Fab Rides">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:site" content="@FAB_Ride">
 <link rel="icon" href="{LOGO}">
 <link rel="preload" href="assets/fonts/barlow-condensed-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/site.css">
@@ -59,7 +58,7 @@ def page(slug, title, desc, body):
 <footer class="site-footer">
   <div class="wrap">
     <span>&copy; 2026 Fab Rides &middot; Winchester &amp; the Alps &middot; Run by Fab Campaigns Ltd, registered in England and Wales, company no. 10302961</span>
-    <span><a href="join.html">Get in touch</a> &middot; <a href="https://www.facebook.com/FabMTBRides/">Facebook</a> &middot; <a href="{FFFN}">Fab&rsquo;s Friday Field Notes</a></span>
+    <span><a href="join.html">Get in touch</a> &middot; <a href="{FFFN}">Fab&rsquo;s Friday Field Notes</a></span>
   </div>
 </footer>
 </body>
