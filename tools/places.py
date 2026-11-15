@@ -7,6 +7,7 @@ Content follows Fabrizio's answers of 15 November 2026 (handbook, "PR #4 questio
 """
 
 PARTHIAN_FIRST_VISIT = "https://parthianclimbing.com/become-a-member-2/"
+ORTESIDA = "https://www.in-lombardia.it/en/where-to-stay/ortesida-0"
 W2W_OFFICIAL = "https://www.epic-series.com/wines2whales"
 
 PLACES = {
@@ -145,9 +146,12 @@ PLACES = {
                 "It&rsquo;s committing and beautiful. A good day here stays with you for a long time.",
             ]),
             ("How we climb it", [
-                "We climb both trad and sport here, depending on the day and the group. "
-                "We&rsquo;ve run introductory trad and sport days at Swanage, so it&rsquo;s a good place to take "
-                "your first steps on Purbeck rock.",
+                "We climb both trad and sport here, depending on the day and the group, and it&rsquo;s a good place "
+                "to take your first steps on Purbeck rock.",
+                "We&rsquo;ve run introductory trad and sport days at Swanage. Fab is a qualified Mountain Leader with decades "
+                "of climbing in the Alps and the UK, and he&rsquo;s working towards the Rock Climbing Instructor award. "
+                "He isn&rsquo;t a qualified climbing instructor yet, so these days are informal: we climb together, "
+                "share what we know, and he sharpens his coaching along the way.",
                 "Days are planned around the forecast and the tide, and we match routes to the group. "
                 "Helmets are compulsory on our outdoor days.",
             ]),
@@ -157,10 +161,7 @@ PLACES = {
                 "We check the BMC Regional Access Database before every visit.",
             ]),
         ],
-        "draft": [
-            "Who led the introductory trad and sport days? If a qualified instructor, we name them here; "
-            "if not, we soften &ldquo;run introductory days&rdquo;. (Safety and qualifications)",
-        ],
+        "draft": [],
     },
     "parthian-southampton": {
         "name": "Parthian Southampton",
@@ -212,8 +213,9 @@ PLACES = {
                 'And down at <a href="place-lake-como.html">Lake Como</a>, limestone and multi-pitch above Lecco.',
             ]),
             ("Where to stay", [
-                "Stay close to Fab&rsquo;s base in Sacco, in Valgerola. We usually point people to Ortesida, "
-                "and soon to a friend&rsquo;s place in Dossa too.",
+                "Stay close to Fab&rsquo;s base in Sacco, in Valgerola. We usually point people to "
+                f'<a href="{ORTESIDA}">Agriturismo Ortesida</a>, near Morbegno. '
+                "A friend&rsquo;s place in Dossa is coming soon: details to follow.",
             ]),
             ("How we use it", [
                 "Our Valtellina season runs from Easter to October. Trips mix riding and climbing days, "
@@ -222,9 +224,7 @@ PLACES = {
                 '<a href="https://fab-wines.co.uk">Fab Wines</a>.',
             ]),
         ],
-        "draft": [
-            "Ortesida and the Dossa place: full names, and links if you want them (each new domain needs your approval).",
-        ],
+        "draft": [],
     },
     "valtellina-ski-touring": {
         "name": "Valtellina ski touring",
@@ -249,7 +249,7 @@ PLACES = {
                 "Touring with us is for confident intermediate ski tourers with their full kit. It isn&rsquo;t for beginners.",
             ]),
             ("Guides and responsibility", [
-                "Want a guide? We&rsquo;ll put you in touch with qualified mountain guides: our first choice is Pizzagalli, "
+                "Want a guide? We&rsquo;ll put you in touch with qualified mountain guides: our first choice is Stefano Pizzagalli, "
                 "and we know the other good ones in the valley. Or join us as part of an experienced group.",
                 "We don&rsquo;t guide: everyone is responsible for themselves and makes their own final call, "
                 "and we may ask you not to join a tour that isn&rsquo;t right for you.",
@@ -261,7 +261,6 @@ PLACES = {
         ],
         "draft": [
             "Liability wording under &ldquo;Guides and responsibility&rdquo;: validate with legal counsel before it goes live.",
-            "Pizzagalli: full name, and a link if you want one.",
         ],
     },
     "lake-como": {
@@ -333,12 +332,11 @@ PLACES = {
             ("How we use it", [
                 "Bormio is our main resort base in January. We ski as a group, stop for a proper mountain lunch, "
                 "and split into smaller groups when the snow invites it.",
-                "When the legs ask for it, we finish at the thermal baths: the Bagni Vecchi, the Bagni Nuovi or Bormio Terme in town.",
+                "When the legs ask for it, we finish in hot water: the Bagni Vecchi, the Bagni Nuovi, or a natural hot spring "
+                "hidden in a nearby valley that we only share on the trip.",
             ]),
         ],
-        "draft": [
-            "The third thermal baths: is it Bormio Terme in town?",
-        ],
+        "draft": [],
     },
     "livigno": {
         "name": "Livigno",
@@ -397,14 +395,20 @@ PLACES = {
                 "The organisers, the culture and the people were exceptional.",
             ]),
             ("What&rsquo;s next", [
-                "Going back is a dream, this time for the &ldquo;other&rdquo; race. "
-                "If you&rsquo;d like to be part of the next team, start riding with us now and tell us.",
+                "Going back is a dream, this time for the &ldquo;other&rdquo; race, the big one. It takes months of "
+                "preparation, so here&rsquo;s what we&rsquo;ve learned so far.",
+                "<strong>Build the base early.</strong> Long, steady rides through the winter, then back-to-back days "
+                "so your body learns to recover overnight.",
+                "<strong>Train with your partner.</strong> You race as a team of two: learn each other&rsquo;s pace, "
+                "when to push and when to wait.",
+                "<strong>Ride technical trails on tired legs.</strong> The hardest descents tend to come late in the day.",
+                "<strong>Practise eating on the bike.</strong> Little and often, with the food you&rsquo;ll race on.",
+                "<strong>Get the bike right.</strong> A full service well before, tyres you trust, and spares you know how to fit.",
+                "If that sounds like your kind of challenge, start riding with us now and tell us.",
                 f'Race details: <a href="{W2W_OFFICIAL}">Wines2Whales official site</a>.',
             ]),
         ],
-        "draft": [
-            "Which is the &ldquo;other&rdquo; race? Name it, or keep it as a teaser.",
-        ],
+        "draft": [],
     },
 }
 
