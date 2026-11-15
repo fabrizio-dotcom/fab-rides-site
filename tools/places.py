@@ -1,9 +1,13 @@
 """Location pages for Fab Rides. One entry per place; tools/build.py turns each into site/place-<slug>.html.
 
 Each place: name, tagline, facts (label, value) pairs, sections (heading, [paragraphs]), and
-`draft`: questions for Fabrizio. While any place has draft questions, tools/check.py fails,
+`draft`: questions still open for Fabrizio. While any place has draft questions, tools/check.py fails,
 so a draft can't go live by accident. Delete the questions once he has answered them.
+Content follows Fabrizio's answers of 15 November 2026 (handbook, "PR #4 questions").
 """
+
+PARTHIAN_FIRST_VISIT = "https://parthianclimbing.com/become-a-member-2/"
+W2W_OFFICIAL = "https://www.epic-series.com/wines2whales"
 
 PLACES = {
     "qecp": {
@@ -19,30 +23,29 @@ PLACES = {
             ("What it&rsquo;s like", [
                 "Beech woodland and chalk downland, with Butser Hill rising on the other side of the A3. "
                 "The trails run through the trees, so it rides well when the open downs are blowing a gale.",
-                "There&rsquo;s something for every rider: flowing tracks for a first outing, and steeper descents "
-                "for anyone who wants to push. It&rsquo;s close enough for a morning session and good enough to keep coming back.",
+                "There&rsquo;s something for every rider, from flowing blue trails to steeper red descents, "
+                "and a pump track we never skip.",
             ]),
             ("How we ride it", [
-                "QECP is our default. Friday mornings are for the regulars on flexible schedules. "
-                "Sundays are slower and family-paced, with time for coffee at the end.",
-                "We meet in the main car park. The exact time is confirmed each week in the Signal group.",
+                "We pick the trails to suit the riders on the day: usually a blue and a red, and the pump track every time. "
+                "When the group is up for it, we head beyond the waymarked trails to the north side. "
+                "You&rsquo;ll find most of our segments on Trailforks.",
+                "Usually we meet in the main car park. Some days we start from Buriton or from the Red Lion at Chalton instead, "
+                "which keeps the best pubs close to the finish. The plan is confirmed each week in the Signal group.",
             ]),
             ("Good to know", [
-                "Parking is pay and display. There&rsquo;s a visitor centre and caf&eacute; by the car park.",
-                "Chalk turns slippery after rain. Expect mud from October to April and bring a spare layer.",
+                "Our tip: once you know the waymarked loops, ask us about the trails north of the red route.",
+                "Parking is pay and display, with a visitor centre and caf&eacute; by the main car park. "
+                "Chalk turns slippery after rain: expect mud from October to April and bring a spare layer.",
             ]),
         ],
-        "draft": [
-            "Which trails do we usually ride, and is the pump track still part of a typical session?",
-            "Is the main car park the right meeting point for both Friday and Sunday?",
-            "Any local tip worth sharing (best loop, where we stop, the coffee)?",
-        ],
+        "draft": [],
     },
     "surrey-hills": {
         "name": "Surrey Hills",
         "tagline": "Saturday destination rides on the best singletrack in the South East.",
         "facts": [
-            ("Where", "Surrey Hills National Landscape: Peaslake, Holmbury Hill, Pitch Hill, Leith Hill"),
+            ("Where", "Surrey Hills National Landscape, starting from Peaslake"),
             ("What we do", "Mountain biking"),
             ("When", "Saturdays, all year"),
             ("From Winchester", "About an hour and a half by car. We share cars."),
@@ -55,38 +58,36 @@ PLACES = {
                 "Leith Hill, the highest point in Surrey, is never far away.",
             ]),
             ("How we ride it", [
-                "These are our big Saturday days. We carpool from Winchester, ride for a few hours, regroup often, "
-                "and finish with food before the drive home.",
+                "We usually start from Peaslake, the village at the heart of the Hurtwood trails. "
+                "We carpool from Winchester, ride for a few hours, regroup often, and eat before the drive home.",
+                "Caf&eacute;s and pubs come and go, so our post-ride stop changes too. Got a favourite? Tell us.",
             ]),
             ("Good to know", [
-                "Much of the riding is on land where access is a privilege, and volunteer trail builders keep it running. "
-                "We ride the way-marked trails, stay off closed lines and leave it as we found it.",
+                "The Hurtwood is looked after by Friends of the Hurtwood, a small charity that keeps the paths, car parks "
+                "and public access going with one full-time ranger and donations. We don&rsquo;t support them yet. "
+                "If you ride there often, they&rsquo;re well worth a donation.",
                 "Peaslake gets busy on weekends. Arriving early makes parking easier.",
             ]),
         ],
-        "draft": [
-            "Where do we usually start: Peaslake, Holmbury or Leith Hill?",
-            "Do we support a local trail group (for example by donating) that we want to name here?",
-            "Which caf&eacute; or pub is our regular stop?",
-        ],
+        "draft": [],
     },
     "winchester": {
         "name": "Winchester",
         "tagline": "Where most of our rides start, and where the conversation carries on.",
         "facts": [
             ("Where", "Winchester, Hampshire, at the western end of the South Downs"),
-            ("What we do", "Weekday training loops on the bike, local runs"),
+            ("What we do", "Weekday training loops on the bike"),
             ("When", "Tuesday or Friday sessions, as announced"),
-            ("Meeting point", "Fab&rsquo;s cave, or the trailhead of the day"),
+            ("Meeting point", "The Battery in Oliver&rsquo;s Battery, or Fab&rsquo;s Cave"),
         ],
         "sections": [
             ("What it&rsquo;s like", [
                 "Winchester sits where the chalk downs meet the Itchen valley. The South Downs Way starts here "
                 "and runs a hundred miles east, so good riding begins at the edge of town.",
-                "St Catherine&rsquo;s Hill, West Wood and the lanes around Sparsholt give us short loops that fit "
-                "before work.",
+                "West Wood is the loop we ride most. Short, varied and close to home, it fits before work.",
             ]),
             ("How we ride it", [
+                "We meet at the Battery in Oliver&rsquo;s Battery, or at Fab&rsquo;s Cave. "
                 "Local sessions are quick and unfussy: an hour or two, mixed terrain, back in time for the day. "
                 "They&rsquo;re a good first ride with us.",
             ]),
@@ -94,10 +95,7 @@ PLACES = {
                 "Bridleways around Winchester are shared with walkers and horses. We slow down, say hello and give way.",
             ]),
         ],
-        "draft": [
-            "Which loops do we ride most often (St Catherine&rsquo;s Hill, West Wood, Lainston, others)?",
-            "Is &ldquo;Fab&rsquo;s cave&rdquo; the right way to describe the meeting point publicly, without an address?",
-        ],
+        "draft": [],
     },
     "portland": {
         "name": "Portland",
@@ -105,7 +103,7 @@ PLACES = {
         "facts": [
             ("Where", "Isle of Portland, Dorset, on the Jurassic Coast"),
             ("What we do", "Sport climbing"),
-            ("When", "Day trips when the weather is right, mostly spring to autumn"),
+            ("Typical grades", "6a to 7a"),
             ("From Winchester", "About an hour and a half by car"),
         ],
         "sections": [
@@ -115,27 +113,30 @@ PLACES = {
                 "There are routes for every grade, a big sky, and a sea that changes the mood of the day.",
             ]),
             ("How we climb it", [
-                "We go as a small group, pick a sector that suits the conditions and the climbers, and share ropes and beta.",
+                "We go as a small group and pick a sector that suits the conditions and the climbers. "
+                "These days most of our routes sit between 6a and 7a, picked to suit whoever turns up.",
+                "Newer climbers are very welcome. Come along with the group, second routes and climb on top rope "
+                "while you build your confidence.",
+            ]),
+            ("What to bring", [
+                "Bring your own harness, helmet and shoes; we share the rest of the kit. "
+                "Helmets are compulsory on our outdoor days: sea cliffs and old quarries drop loose rock.",
             ]),
             ("Good to know", [
                 "It&rsquo;s exposed: sun, wind and salt all play a part. Sea-cliff sectors depend on tide and swell.",
                 "Some areas have access agreements or seasonal restrictions. We check the BMC Regional Access Database before we go.",
             ]),
         ],
-        "draft": [
-            "Which grades should we mention as typical for our group days here?",
-            "How do newer climbers take part here (seconding, top-rope)? (Safety wording)",
-            "Do we lend gear to newer climbers, or should they bring their own harness and shoes?",
-        ],
+        "draft": [],
     },
     "swanage": {
         "name": "Swanage",
-        "tagline": "Purbeck sea cliffs and a classic Dorset day out.",
+        "tagline": "Purbeck sea cliffs, trad and sport, and a classic Dorset day out.",
         "facts": [
             ("Where", "Isle of Purbeck, Dorset, on the Jurassic Coast"),
-            ("What we do", "Climbing on coastal limestone"),
-            ("When", "Outdoor days in settled weather"),
-            ("From Winchester", "To confirm"),
+            ("What we do", "Trad and sport climbing"),
+            ("Who it suits", "Beginners and experienced climbers"),
+            ("From Winchester", "About an hour and a half by car, longer on summer weekends"),
         ],
         "sections": [
             ("What it&rsquo;s like", [
@@ -144,7 +145,11 @@ PLACES = {
                 "It&rsquo;s committing and beautiful. A good day here stays with you for a long time.",
             ]),
             ("How we climb it", [
-                "Swanage days are planned around the forecast and the tide, and we match routes to the group.",
+                "We climb both trad and sport here, depending on the day and the group. "
+                "We&rsquo;ve run introductory trad and sport days at Swanage, so it&rsquo;s a good place to take "
+                "your first steps on Purbeck rock.",
+                "Days are planned around the forecast and the tide, and we match routes to the group. "
+                "Helmets are compulsory on our outdoor days.",
             ]),
             ("Good to know", [
                 "Tide, swell and wet rock decide what&rsquo;s possible. We check the forecast the evening before and again in the morning.",
@@ -153,19 +158,18 @@ PLACES = {
             ]),
         ],
         "draft": [
-            "Drive time from Winchester you&rsquo;re happy to publish.",
-            "Is Swanage suitable for beginners in our group, or should the page say it&rsquo;s for experienced climbers? (Safety wording)",
-            "Do we climb trad here, sport, or both?",
+            "Who led the introductory trad and sport days? If a qualified instructor, we name them here; "
+            "if not, we soften &ldquo;run introductory days&rdquo;. (Safety and qualifications)",
         ],
     },
-    "southampton-wall": {
-        "name": "Southampton Climbing Wall",
-        "tagline": "Indoor climbing, all year, whatever the weather.",
+    "parthian-southampton": {
+        "name": "Parthian Southampton",
+        "tagline": "Indoor climbing three evenings a week, whatever the weather.",
         "facts": [
-            ("Where", "Southampton"),
+            ("Where", "Parthian Climbing, Southampton"),
             ("What we do", "Indoor climbing and bouldering"),
-            ("When", "Friday mornings, and Monday evenings in bad weather"),
-            ("From Winchester", "To confirm"),
+            ("When", "Monday, Wednesday and Friday evenings"),
+            ("Who it suits", "All levels, first-timers included"),
         ],
         "sections": [
             ("What it&rsquo;s like", [
@@ -173,26 +177,25 @@ PLACES = {
                 "and where most new climbers start with us before moving outside.",
             ]),
             ("How we climb here", [
-                "Sessions are relaxed. We warm up together, pick problems or routes to work on, and swap beta. "
-                "First-timers get a proper briefing and a partner who knows the ropes.",
+                "Our regular sessions are Monday, Wednesday and Friday evenings. They&rsquo;re relaxed: "
+                "we warm up together, pick problems or routes to work on, and swap beta.",
             ]),
-            ("Good to know", [
-                "You can hire shoes at the wall. Entry is paid at the desk.",
+            ("Before your first visit", [
+                "Parthian asks every new climber to pre-register before their first visit. For bouldering, "
+                "watch their short induction video; for roped climbing, they run Adult Intro sessions. "
+                f'Check their <a href="{PARTHIAN_FIRST_VISIT}">First Visit page</a> before you come. '
+                "You can hire shoes at the wall.",
             ]),
         ],
-        "draft": [
-            "Which wall is it? Name and link (we need to approve the domain).",
-            "Is the travel time right, and is Monday evening still a regular slot?",
-            "Does the wall require its own registration or induction before a first visit?",
-        ],
+        "draft": [],
     },
     "valtellina": {
         "name": "Valtellina",
-        "tagline": "Our Alpine base: mountain biking, granite and long summer days.",
+        "tagline": "Our Alpine base: mountain biking, three kinds of rock and long days from Easter to October.",
         "facts": [
             ("Where", "Lombardy, Italy: the valley of the Adda, from Lake Como up to Bormio"),
-            ("What we do", "Mountain biking, multi-pitch and granite climbing in Val di Mello"),
-            ("When", "Community trips in summer, typically late summer"),
+            ("What we do", "Mountain biking; climbing on granite, Verrucano and limestone"),
+            ("When", "Trips from Easter to October"),
             ("Getting there", "Fly to Milan or Bergamo, then about two hours by car"),
         ],
         "sections": [
@@ -202,19 +205,25 @@ PLACES = {
                 "There are more than fifty mountain bike routes in the valley and the peaks around it, from old mule tracks "
                 "to proper Alpine descents.",
             ]),
-            ("Val di Mello", [
-                "A short drive up Val Masino, Val di Mello is a nature reserve of granite slabs, boulders and clear water. "
-                "It&rsquo;s a different kind of climbing from the limestone at home: friction, cracks and big walls.",
+            ("Three kinds of rock", [
+                "Val di Mello, a short drive up Val Masino, is a nature reserve of granite slabs, boulders and clear water: "
+                "friction, cracks and big walls.",
+                "Valgerola has something rarer: the purple-red Verrucano Lombardo, a conglomerate you won&rsquo;t find at home.",
+                'And down at <a href="place-lake-como.html">Lake Como</a>, limestone and multi-pitch above Lecco.',
+            ]),
+            ("Where to stay", [
+                "Stay close to Fab&rsquo;s base in Sacco, in Valgerola. We usually point people to Ortesida, "
+                "and soon to a friend&rsquo;s place in Dossa too.",
             ]),
             ("How we use it", [
-                "This is where Fab Rides feels most at home. Summer trips mix riding and climbing days, "
-                "with evenings that move slowly and a glass of the valley&rsquo;s own wine.",
+                "Our Valtellina season runs from Easter to October. Trips mix riding and climbing days, "
+                "with evenings that move slowly.",
+                'Those terraces grow the Nebbiolo behind the valley&rsquo;s wines. Taste them through '
+                '<a href="https://fab-wines.co.uk">Fab Wines</a>.',
             ]),
         ],
         "draft": [
-            "Should we say where in Valtellina we stay, or keep it general?",
-            "Which month do summer trips usually run?",
-            "Link to Fab Wines here, given the terraced vineyards?",
+            "Ortesida and the Dossa place: full names, and links if you want them (each new domain needs your approval).",
         ],
     },
     "valtellina-ski-touring": {
@@ -222,9 +231,9 @@ PLACES = {
         "tagline": "Quiet valleys, no queues, and turns you&rsquo;ve earned.",
         "facts": [
             ("Where", "Valgerola, Val Tartano, Valle Spluga (Italy) and the Maloja Pass (Switzerland)"),
-            ("What we do", "Ski touring and quieter resort days"),
-            ("When", "Community trips in January and April"),
-            ("Who it suits", "Fit skiers with touring kit and avalanche training"),
+            ("What we do", "Ski touring, plus resort days at Pescegallo, Madesimo and Chiesa in Valmalenco"),
+            ("When", "Trips in January and April"),
+            ("Who it suits", "Confident intermediate ski tourers with full kit. Not for beginners."),
         ],
         "sections": [
             ("What it&rsquo;s like", [
@@ -234,50 +243,51 @@ PLACES = {
                 "within a short drive.",
             ]),
             ("How we tour", [
-                "Small groups, early starts, and a plan that bends to the snow and the avalanche bulletin. "
-                "January is for deep winter days; April is for long spring tours on firm snow.",
+                "Small groups, early starts, and a plan that bends to the snow. January is for deep winter days; "
+                "April is for long spring tours on firm snow. For resort days we head to Pescegallo, Madesimo "
+                "or Chiesa in Valmalenco.",
+                "Touring with us is for confident intermediate ski tourers with their full kit. It isn&rsquo;t for beginners.",
             ]),
-            ("Good to know", [
-                "Every tourer carries a transceiver, probe and shovel and knows how to use them. "
-                "We read the local avalanche bulletin each day and turn back when it says so.",
+            ("Guides and responsibility", [
+                "Want a guide? We&rsquo;ll put you in touch with qualified mountain guides: our first choice is Pizzagalli, "
+                "and we know the other good ones in the valley. Or join us as part of an experienced group.",
+                "We don&rsquo;t guide: everyone is responsible for themselves and makes their own final call, "
+                "and we may ask you not to join a tour that isn&rsquo;t right for you.",
+            ]),
+            ("Safety", [
+                "We read the avalanche bulletin every day and choose the route around it. We practise transceiver searches together. "
+                "Everyone brings full kit in good working order: transceiver, probe, shovel and skins.",
             ]),
         ],
         "draft": [
-            "Do we tour with a qualified mountain guide? If so, say so here. (Safety and qualifications)",
-            "Which minimum experience do you want to ask of new tourers?",
-            "Confirm the avalanche-bulletin practice described under Good to know. (Safety wording)",
-            "Is Pescegallo or Madesimo used for resort days we should mention?",
+            "Liability wording under &ldquo;Guides and responsibility&rdquo;: validate with legal counsel before it goes live.",
+            "Pizzagalli: full name, and a link if you want one.",
         ],
     },
     "lake-como": {
         "name": "Lake Como",
-        "tagline": "Legendary roads, lakeside paths and the climbing town of Lecco.",
+        "tagline": "Limestone multi-pitch, the Wayfarer&rsquo;s Path and long lunches above the lake.",
         "facts": [
-            ("Where", "Lombardy, Italy: the lake and the mountains between Como, Lecco and Colico"),
-            ("What we do", "Road and gravel riding, hiking, climbing"),
-            ("When", "Spring to autumn"),
+            ("Where", "Lombardy, Italy: Lecco and the eastern shore of the lake"),
+            ("What we do", "Limestone climbing and multi-pitch, walking"),
+            ("When", "All year: Galbiate and Piani d&rsquo;Erna in winter, Versasio and Nibbio in summer"),
             ("Getting there", "About an hour from Milan"),
         ],
         "sections": [
             ("What it&rsquo;s like", [
-                "Steep mountains straight out of deep water. The roads are part of cycling history: "
-                "the Muro di Sormano is one of the hardest climbs in Italy, and the Giro di Lombardia has raced here for generations.",
-                "On foot, the Sentiero del Viandante, the Wayfarer&rsquo;s Path, follows the eastern shore on old trade routes "
-                "from Abbadia Lariana to Colico.",
+                "Steep limestone mountains rising straight out of deep water. The Sentiero del Viandante, "
+                "the Wayfarer&rsquo;s Path, follows the eastern shore on old trade routes from Abbadia Lariana to Colico.",
             ]),
             ("Lecco", [
-                "Lecco is a climbing town with a long tradition. The crags and the Grigna massif above it have shaped "
-                "generations of Italian alpinists.",
+                "Lecco is a climbing town with a long tradition, and its limestone is where we do our multi-pitch. "
+                "Our focus now is Galbiate and Piani d&rsquo;Erna in winter, Versasio and Nibbio in summer.",
             ]),
             ("How we use it", [
-                "Lake Como days fit around a Valtellina trip: a big road or gravel loop, a stage of the Viandante, "
-                "or a day on Lecco rock.",
+                "A stage of the Viandante, a day of climbing around Lecco, or a good walk that ends at a restaurant "
+                "above Dervio, Bellano or Varenna. Lake Como days fit neatly around a Valtellina trip.",
             ]),
         ],
-        "draft": [
-            "Which of these do we actually do on trips (road, gravel, Viandante, Lecco climbing)?",
-            "Piani di Bobbio was on the old page: keep it, and for which activity?",
-        ],
+        "draft": [],
     },
     "dolomites": {
         "name": "Dolomites",
@@ -285,7 +295,7 @@ PLACES = {
         "facts": [
             ("Where", "North-east Italy: Pale di San Martino, Tre Cime di Lavaredo and around"),
             ("What we do", "Multi-pitch climbing, enduro riding, skiing"),
-            ("When", "Summer for climbing and riding; winter for skiing"),
+            ("When", "Every year, May to July"),
             ("Getting there", "Fly to Venice or Verona, then two to three hours by car"),
         ],
         "sections": [
@@ -294,19 +304,17 @@ PLACES = {
                 "The Pale di San Martino above San Martino di Castrozza, and the three towers of the Tre Cime di Lavaredo, "
                 "are among the most recognisable mountains in the Alps.",
             ]),
-            ("How we use it", [
-                "Dolomite trips are for longer days: multi-pitch routes on rock unlike anything in the UK, "
-                "enduro descents from high passes, and winter days on the snow.",
+            ("How we climb here", [
+                "Multi-pitch days are a group effort, and only once we&rsquo;ve climbed together and know each other&rsquo;s skills. "
+                "We don&rsquo;t usually hire guides for these days, unless they come along as friends.",
             ]),
-            ("Good to know", [
-                "Afternoon storms are common in summer. We start early and plan to be off the wall by early afternoon.",
+            ("Weather", [
+                "We plan to be off exposed ground from early afternoon until about five, when storms tend to build. "
+                "We keep an eye on temperature and pressure through the day, and we avoid descending by via ferrata "
+                "when a storm could arrive.",
             ]),
         ],
-        "draft": [
-            "Who leads multi-pitch days? Is a guide involved? (Safety and qualifications)",
-            "Do Dolomite trips run every year, and in which month?",
-            "Confirm the early-start rule for summer storms. (Safety wording)",
-        ],
+        "draft": [],
     },
     "bormio": {
         "name": "Bormio",
@@ -314,68 +322,64 @@ PLACES = {
         "facts": [
             ("Where", "Upper Valtellina, Lombardy, on the edge of the Stelvio National Park"),
             ("What we do", "Resort skiing, off-piste when conditions allow, ski touring"),
-            ("When", "January community trip"),
+            ("When", "January trip"),
             ("Who it suits", "Confident on red runs, minimum"),
         ],
         "sections": [
             ("What it&rsquo;s like", [
                 "An old town of stone and frescoes under a long, steep mountain. The Stelvio piste is one of the great "
                 "downhill courses, and in 2026 Bormio hosted the men&rsquo;s alpine events and the first Olympic ski mountaineering races.",
-                "After a long day, the thermal baths in the valley are part of the routine.",
             ]),
             ("How we use it", [
                 "Bormio is our main resort base in January. We ski as a group, stop for a proper mountain lunch, "
                 "and split into smaller groups when the snow invites it.",
+                "When the legs ask for it, we finish at the thermal baths: the Bagni Vecchi, the Bagni Nuovi or Bormio Terme in town.",
             ]),
         ],
         "draft": [
-            "Mention the thermal baths as something we actually do?",
+            "The third thermal baths: is it Bormio Terme in town?",
         ],
     },
     "livigno": {
         "name": "Livigno",
-        "tagline": "High, cold and snow-sure.",
+        "tagline": "High, cold and snow-sure, with bikes once the snow has gone.",
         "facts": [
             ("Where", "A high valley in the Lombard Alps, close to the Swiss border"),
-            ("What we do", "Resort skiing"),
-            ("When", "Day trips from Valtellina during winter trips"),
+            ("What we do", "Off-piste and piste skiing; mountain biking in summer"),
+            ("When", "Day trips from Valtellina"),
             ("Who it suits", "Intermediate and advanced skiers"),
         ],
         "sections": [
             ("What it&rsquo;s like", [
                 "Livigno sits at around 1,800 metres, so the snow arrives early and stays late. "
                 "It hosted the freestyle and snowboard events of the 2026 Winter Olympics.",
-                "Wide slopes on both sides of the valley make it easy to keep a group together.",
             ]),
             ("How we use it", [
-                "A day trip from our Valtellina base when we want reliable snow and a change of scene.",
+                "Plenty of off-piste, good piste days when the group wants them, and mountain biking once the snow has gone.",
             ]),
         ],
-        "draft": [
-            "Anything specific we do in Livigno you want mentioned?",
-        ],
+        "draft": [],
     },
-    "santa-caterina": {
-        "name": "Santa Caterina",
-        "tagline": "The quieter alternative, with World Cup pedigree.",
+    "valle-dei-forni": {
+        "name": "Valle dei Forni",
+        "tagline": "Some of the best ski touring in Europe, above Santa Caterina.",
         "facts": [
-            ("Where", "Valfurva, Upper Valtellina, Lombardy"),
-            ("What we do", "Resort skiing"),
+            ("Where", "Valfurva, Upper Valtellina, in the Stelvio National Park"),
+            ("What we do", "Ski touring"),
             ("When", "During winter trips"),
-            ("Who it suits", "Confident skiers who like steep, quiet pistes"),
+            ("Who it suits", "Confident ski tourers with full kit"),
         ],
         "sections": [
             ("What it&rsquo;s like", [
-                "A small village at the end of the road below the Gavia Pass. Fewer people than Bormio, "
-                "and a downhill piste that has hosted World Cup races.",
+                "Above Santa Caterina, the road ends and the Valle dei Forni opens towards the glaciers of the Ortles-Cevedale group. "
+                "It holds some of the best ski touring routes in Europe. That&rsquo;s what brings us here.",
             ]),
-            ("How we use it", [
-                "A focused day on the mountain when Bormio is busy: long runs, short lift queues, lunch in the sun.",
+            ("How we tour here", [
+                'Same rules as all our <a href="place-valtellina-ski-touring.html">ski touring</a>: full kit, '
+                "the avalanche bulletin first, and everyone makes their own call.",
             ]),
         ],
-        "draft": [
-            "Should we name the Deborah Compagnoni piste, and do we ski it as a group?",
-        ],
+        "draft": [],
     },
     "wines2whales": {
         "name": "Wines2Whales, South Africa",
@@ -383,23 +387,23 @@ PLACES = {
         "facts": [
             ("Where", "Western Cape, South Africa: from the Winelands near Somerset West to Hermanus"),
             ("What we do", "Mountain bike stage racing, in teams of two"),
-            ("When", "We raced it in 2025 and plan to return"),
+            ("When", "We raced it in 2025"),
             ("Who it suits", "Riders ready for three long days in the saddle"),
         ],
         "sections": [
             ("What it&rsquo;s like", [
-                "Wines2Whales crosses the mountains of the Western Cape "
-                "through vineyards, fynbos and forest, and finishes in Hermanus, famous for its whales.",
+                "Wines2Whales crosses the mountains of the Western Cape through vineyards, fynbos and forest, "
+                "and finishes in Hermanus, famous for its whales.",
                 "The organisers, the culture and the people were exceptional.",
             ]),
-            ("How we&rsquo;re approaching it", [
-                "We&rsquo;re building the foundation to return stronger, with a bigger Winchester and Dolomites contingent. "
+            ("What&rsquo;s next", [
+                "Going back is a dream, this time for the &ldquo;other&rdquo; race. "
                 "If you&rsquo;d like to be part of the next team, start riding with us now and tell us.",
+                f'Race details: <a href="{W2W_OFFICIAL}">Wines2Whales official site</a>.',
             ]),
         ],
         "draft": [
-            "Which year do we plan to return? Keep it vague, or name it?",
-            "Link to the official race site? (We need to approve the domain.)",
+            "Which is the &ldquo;other&rdquo; race? Name it, or keep it as a teaser.",
         ],
     },
 }
@@ -410,15 +414,15 @@ LINKS = {
     "Surrey Hills": "surrey-hills",
     "Winchester": "winchester",
     "Valtellina, Alps": "valtellina",
-    "Valtellina / Lake Como / Val di Mello": "valtellina",
+    "Valtellina and Val di Mello": "valtellina",
     "Portland": "portland",
     "Swanage": "swanage",
-    "Southampton Climbing Wall": "southampton-wall",
+    "Parthian Southampton": "parthian-southampton",
     "Valgerola / Val Tartano / Spluga / Maloja": "valtellina-ski-touring",
     "Backcountry Touring": "valtellina-ski-touring",
     "Lake Como": "lake-como",
     "Dolomites": "dolomites",
     "Bormio": "bormio",
     "Livigno": "livigno",
-    "Santa Caterina": "santa-caterina",
+    "Valle dei Forni": "valle-dei-forni",
 }

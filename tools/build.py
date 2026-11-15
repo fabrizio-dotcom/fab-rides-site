@@ -123,10 +123,11 @@ home = f"""
   <div class="card"><h3>Climb</h3><p>Indoor walls and outdoor crags from Swanage to the Alps. All abilities, no ego.</p><a class="more" href="climb.html">Explore &rarr;</a></div>
   <div class="card"><h3>Ski</h3><p>Winter adventures in Valtellina and the wider Alps. Groomers, touring, fresh lines.</p><a class="more" href="ski.html">Explore &rarr;</a></div>
 </div>""") + section("<h2>Our Rhythm</h2>" + table(["When", "What", "Who"], [
-    ["<strong>Friday mornings</strong>", "Climbing wall or local MTB loop", "Regulars, flexible schedules"],
+    ["<strong>Mon, Wed, Fri evenings</strong>", "Indoor climbing at Parthian Southampton", "All levels"],
+    ["<strong>Friday mornings</strong>", "Local MTB loop", "Regulars, flexible schedules"],
     ["<strong>Saturdays</strong>", "Main community ride: Surrey Hills, QECP, destination days", "Open to all"],
     ["<strong>Sunday mornings</strong>", "Family-friendly rides, gentler pace, post-ride coffee", "Families, newer riders"],
-    ["<strong>Seasonal trips</strong>", "Dolomites (summer), Valtellina ski (Jan/Apr), international", "Open to all"],
+    ["<strong>Seasonal trips</strong>", "Valtellina (Easter to October), Dolomites (May to July), ski touring (January and April), further afield", "Open to all"],
 ]) + """
 <p data-gap>No booking systems. Just an invitation to join.</p>
 <p>For now, Fab Rides runs under Fab Campaigns Ltd. We&rsquo;re deciding whether to keep it that way or give Fab Rides a structure of its own, and we&rsquo;ll share the decision here.</p>
@@ -156,7 +157,7 @@ ride = head("Ride", "Social mountain biking. No egos. No drop rides. Just good t
     ("Queen Elizabeth Country Park", "Local anchor", "Our home trails. Flow tracks, pump track, proper enduro descents. 40 minutes from Winchester, the go-to for Friday mornings and Sunday rides."),
     ("Surrey Hills", "Destination day", "Technical singletrack, chalky climbs, best riding in the South East. Regular Saturday destination days. Carpools from Winchester."),
     ("Winchester", "Local &middot; Weekday", "Training loops from St Catherine&rsquo;s Hill or the Lainston House area. Quick Friday or Tuesday sessions."),
-    ("Valtellina, Alps", "Community trips", "Our Alpine base. 50+ routes, proper mountain terrain. Seasonal community trips, typically late summer. Open to all."),
+    ("Valtellina, Alps", "Community trips", "Our Alpine base. 50+ routes, proper mountain terrain. Community trips from Easter to October. Open to all."),
 ]) + '<p class="note" data-gap>We&rsquo;ve also raced Wines2Whales in South Africa and ridden the Dolomites. Fab Riders have a broad horizon.</p>') + section("""
 <div class="prose">
 <h2>What&rsquo;s Coming: Cyclocross</h2>
@@ -184,7 +185,7 @@ climb = head("Climb", "Indoor walls and outdoor crags. Building strength, techni
 <p>Whether you&rsquo;re touching plastic for the first time or projecting your hardest grade, there&rsquo;s space here.</p>
 </div>""") + section("""
 <h2>Session Types</h2>
-<div class="prose"><h3>Indoor Sessions</h3><p>Regular sessions at Southampton climbing wall. Building strength, technique, year-round regardless of weather. Friday mornings are the usual slot.</p>
+<div class="prose"><h3>Indoor Sessions</h3><p>Regular sessions at <a href="place-parthian-southampton.html">Parthian in Southampton</a> on Monday, Wednesday and Friday evenings. Building strength and technique all year, whatever the weather.</p>
 <h3 data-gap>Outdoor Crags, UK</h3></div>""" + places([
     ("Portland", "Dorset coast", "World-class sport climbing on Dorset limestone. Sea cliffs, hard routes, extraordinary setting. Always worth the drive."),
     ("Swanage", "Dorset coast", "Coastal limestone with something for every grade. Beautiful setting. A community favourite for outdoor days."),
@@ -214,10 +215,10 @@ ski = head("Ski", "Winter adventures in the Alps. From resort days to backcountr
 <p>When Scotland delivers, we&rsquo;ll head north. Occasional dry slope sessions for off-season practice and pre-trip preparation.</p>
 </div>""") + section("""
 <h2>Our Valtellina Base</h2>
-<p class="prose">Our Alpine base gives access to world-class skiing without the crowds. Bormio, Livigno, Santa Caterina, all within reach. Plus ski touring terrain that rivals anywhere in the Alps.</p>""" + places([
+<p class="prose">Our Alpine base gives access to world-class skiing without the crowds. Bormio, Livigno and the Valle dei Forni, all within reach. Plus ski touring terrain that rivals anywhere in the Alps.</p>""" + places([
     ("Bormio", "Resort + Touring", "Long vertical drop, great piste variety, and serious off-piste when conditions are right. Our main resort base for January trips."),
     ("Livigno", "Resort", "High altitude resort with reliable snow. Good for intermediate and advanced skiers. Accessible from Valtellina for a day trip."),
-    ("Santa Caterina", "Quieter resort", "Less crowded alternative to Bormio. Excellent terrain, World Cup downhill pedigree. Great for a focused day on the mountain."),
+    ("Valle dei Forni", "Ski touring", "Above Santa Caterina, the Valle dei Forni opens onto some of the best ski touring routes in Europe. That&rsquo;s what brings us here."),
     ("Backcountry Touring", "Earn your turns", "Alpine touring terrain across the Valtellina valley. Requires touring setup and avalanche safety gear. Smaller groups, bigger rewards."),
 ]) + '<p data-gap>Community trips typically run in <strong>January</strong> and <strong>April</strong>.</p>') + section("""
 <div class="prose">
@@ -233,7 +234,7 @@ ski = head("Ski", "Winter adventures in the Alps. From resort days to backcountr
 gather = head("Where We Gather", "Fab Rides doesn&rsquo;t have a headquarters. It has a geography: a loose, moving landscape of car parks, crags, trail heads, mountain huts, and the occasional exceptional pub.") + section("""
 <div class="prose">
 <h2>Winchester, Home Base</h2>
-<p>Winchester is where most of us start. The city sits at the edge of good terrain: 40 minutes from Queen Elizabeth Country Park, an hour and a half from the Surrey Hills and from Portland. For rides, we typically meet at the QECP car park or at Fab&rsquo;s cave for local loops in West Wood. For climbing, the Southampton wall on Friday mornings is the default.</p>
+<p>Winchester is where most of us start. The city sits at the edge of good terrain: 40 minutes from Queen Elizabeth Country Park, an hour and a half from the Surrey Hills and from Portland. For rides, we meet at the QECP car park, or at the Battery in Oliver&rsquo;s Battery or Fab&rsquo;s Cave for local loops in West Wood. For climbing, it&rsquo;s Parthian in Southampton on Monday, Wednesday and Friday evenings.</p>
 <p><a href="place-winchester.html">More about riding from Winchester &rarr;</a></p>
 <p>After most sessions: either the pub nearest the trailhead, or coffee somewhere on the way back. The debrief is non-negotiable.</p>
 </div>""") + section("<h2>South East England</h2>" + places([
@@ -241,13 +242,17 @@ gather = head("Where We Gather", "Fab Rides doesn&rsquo;t have a headquarters. I
     ("Surrey Hills", "MTB &middot; Surrey", "Saturday destination rides. Box Hill, Leith Hill, Holmbury: serious singletrack in beautiful woodland. Carpools arranged from Winchester. One of our most-visited spots."),
     ("Portland", "Climbing &middot; Dorset", "World-class sport climbing on Dorset limestone. Sea cliffs, hard routes, extraordinary setting. Day trips when conditions are good."),
     ("Swanage", "Climbing &middot; Dorset", "Coastal limestone with something for every grade. Beautiful setting, varied climbing. A community favourite for outdoor days."),
-    ("Southampton Climbing Wall", "Indoor &middot; Year-round", "The Monday evening and Friday morning in bad weather default for climbing sessions. Covered, graded for all abilities. Where most new climbers start with us before moving outside."),
+    ("Parthian Southampton", "Indoor &middot; Year-round", "Monday, Wednesday and Friday evenings. Graded walls for all abilities, and where most new climbers start with us before moving outside."),
 ])) + section("""<h2>The Alps, Valtellina Base</h2>
 <p class="prose">The Alps aren&rsquo;t a destination we visit occasionally. They&rsquo;re part of how Fab Rides thinks and moves. We have a base in Valtellina, near Lake Como, and in the Dolomites, which anchors our seasonal community trips.</p>""" + places([
-    ("Valtellina / Lake Como / Val di Mello", "MTB + Climbing", "Over 50 MTB routes in the valley and surrounding peaks. Multi-pitch climbing on proper Alpine limestone. The summer hub for community trips."),
+    ("Valtellina and Val di Mello", "MTB + Climbing", "Over 50 MTB routes in the valley and the peaks around it. Three kinds of rock: granite in Val di Mello, the purple-red Verrucano of Valgerola, and limestone at Lake Como. Trips from Easter to October."),
     ("Valgerola / Val Tartano / Spluga / Maloja", "Skiing", "World-class skiing without the overcrowded resorts. January and April community trips. Ski touring terrain that rivals anywhere in the Alps."),
     ("Dolomites", "Climbing + MTB + Skiing", "Pale di San Martino. Tre Cime di Lavaredo. Iconic terrain for multi-day climbing and enduro riding. Where the adventures scale up."),
-    ("Lake Como", "Cycling + Hiking + Climbing", "Road and gravel riding on legendary terrain. The Piani di Bobbio. The Muro di Sormano. Extraordinary riding, extraordinary views. The Wayfarer Walk and the superb crags of Lecco."),
+    ("Lake Como", "Climbing + Hiking", "Limestone climbing and multi-pitch around Lecco, the Sentiero del Viandante along the shore, and walks that end at good restaurants above Dervio, Bellano and Varenna."),
+])) + section("""<h2>New Horizons</h2>
+<p class="prose">We&rsquo;re always looking for the next place worth sharing.</p>""" + places([
+    ("Bergen, Norway", "Exploring now", "We&rsquo;re exploring the mountains and fjords around Bergen. Watch this space."),
+    ("North Karpathos and Saria, Greece", "Next year", "Our first two trips are planned for next year: hiking, scrambling and living fully at the wild northern end of Karpathos and on Saria, the small island just across the channel."),
 ])) + section("""
 <div class="prose">
 <h2>Beyond Europe</h2>
@@ -265,10 +270,13 @@ gather = head("Where We Gather", "Fab Rides doesn&rsquo;t have a headquarters. I
 join = head("Join the Community", "No membership form. No subscription. No performance standard. Just show up, ride your own ride, and see if this feels like your kind of people.") + section("""
 <div class="prose">
 <h2>How It Works</h2>
-<p>Fab Rides doesn&rsquo;t run on booking systems or commercial infrastructure. It runs on a Signal group (<a href="https://fabrizio.deliberali.com/idea1">we don&rsquo;t use WhatsApp</a>), word of mouth, and the weekly field notes that go out every Friday. When a session is happening, it&rsquo;s announced. You join if you can. Simple.</p>
+<p>Fab Rides runs on a Signal group (<a href="https://fabrizio.deliberali.com/idea1">we don&rsquo;t use WhatsApp</a>), word of mouth, and the field notes that go out every Friday. When a session is happening, it&rsquo;s announced. You join if you can. Simple.</p>
+<h3>Costs, kept honest</h3>
+<p>Fab Rides isn&rsquo;t here to make a profit. When a day or a trip has real costs, we share them fairly: travel and logistics, the courses and qualifications that keep us safe, and the time it takes to plan things properly. Covering those costs keeps Fab Rides going. Creating value for the people who come along is the reason we do it.</p>
 <h3>The Weekly Rhythm</h3>
 </div>""" + table(["Day", "Activity", "Where", "Who"], [
-    ["<strong>Friday AM</strong>", "Climbing wall or local MTB loop", "Southampton wall / QECP", "Flexible schedules, regulars"],
+    ["<strong>Mon, Wed, Fri evenings</strong>", "Indoor climbing", "Parthian Southampton", "All levels"],
+    ["<strong>Friday AM</strong>", "Local MTB loop", "QECP or Winchester", "Flexible schedules, regulars"],
     ["<strong>Saturday</strong>", "Main community ride or crag day", "Surrey Hills, Portland, or local", "Open to all"],
     ["<strong>Sunday AM</strong>", "Family-friendly ride or run", "QECP or Winchester local", "Families, newer riders"],
     ["<strong>Seasonal trips</strong>", "Alps, Dolomites, international adventures", "Valtellina, South Africa, beyond", "Open to all"],
