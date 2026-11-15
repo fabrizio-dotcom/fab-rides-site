@@ -58,7 +58,7 @@ def page(slug, title, desc, body):
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    <span>&copy; 2026 Fab Rides &middot; Winchester &amp; the Alps</span>
+    <span>&copy; 2026 Fab Rides &middot; Winchester &amp; the Alps &middot; Run by Fab Campaigns Ltd</span>
     <span><a href="join.html">Get in touch</a> &middot; <a href="https://www.facebook.com/FabMTBRides/">Facebook</a> &middot; <a href="{FFFN}">Fab&rsquo;s Friday Field Notes</a></span>
   </div>
 </footer>
@@ -114,9 +114,10 @@ home = f"""
     ["<strong>Friday mornings</strong>", "Climbing wall or local MTB loop", "Regulars, flexible schedules"],
     ["<strong>Saturdays</strong>", "Main community ride: Surrey Hills, QECP, destination days", "Open to all"],
     ["<strong>Sunday mornings</strong>", "Family-friendly rides, gentler pace, post-ride coffee", "Families, newer riders"],
-    ["<strong>Seasonal trips</strong>", "Dolomites (summer), Valtellina ski (Jan/Mar), international", "Open to all"],
+    ["<strong>Seasonal trips</strong>", "Dolomites (summer), Valtellina ski (Jan/Apr), international", "Open to all"],
 ]) + """
-<p data-gap>No booking systems. No commercial transactions. Just an invitation to join.</p>
+<p data-gap>No booking systems. Just an invitation to join.</p>
+<p>For now, Fab Rides runs under Fab Campaigns Ltd. We&rsquo;re deciding whether to keep it that way or give Fab Rides a structure of its own, and we&rsquo;ll share the decision here.</p>
 <div class="btn-row"><a class="btn ghost" href="where-we-gather.html">See Where We Gather &rarr;</a><a class="btn" href="join.html">Join the Community &rarr;</a></div>""") + section(f"""
 <div class="prose">
 <h2>Fab Riders</h2>
@@ -173,10 +174,8 @@ climb = head("Climb", "Indoor walls and outdoor crags. Building strength, techni
 <h2>Session Types</h2>
 <div class="prose"><h3>Indoor Sessions</h3><p>Regular sessions at Southampton climbing wall. Building strength, technique, year-round regardless of weather. Friday mornings are the usual slot.</p>
 <h3 data-gap>Outdoor Crags, UK</h3></div>""" + places([
-    ("Headbury Crag", "Local &middot; Hampshire", "<strong>Bring proper boots, not low shoes.</strong> Cattle fields and tractor ruts on the approach. Good sport climbing, short drive from Winchester."),
-    ("Portland Bill", "Dorset coast", "World-class sport climbing on Dorset limestone. Sea cliffs, hard routes, extraordinary setting. Always worth the drive."),
+    ("Portland", "Dorset coast", "World-class sport climbing on Dorset limestone. Sea cliffs, hard routes, extraordinary setting. Always worth the drive."),
     ("Swanage", "Dorset coast", "Coastal limestone with something for every grade. Beautiful setting. A community favourite for outdoor days."),
-    ("Sandstone Outcrops", "Woodland", "Weathered climbing in beautiful woodland. Closer to home for a quick session when the bigger crags aren&rsquo;t on the cards."),
 ]) + """
 <div class="prose" data-gap><h3>Alpine Climbing</h3><p>Multi-pitch routes in the Dolomites and Valtellina. Longer days, bigger exposure, deeper rewards. Occasional community trips for experienced climbers. The Dolomite limestone is unlike anything in the UK.</p></div>""") + section("""
 <div class="prose">
@@ -208,7 +207,7 @@ ski = head("Ski", "Winter adventures in the Alps. From resort days to backcountr
     ("Livigno", "Resort", "High altitude resort with reliable snow. Good for intermediate and advanced skiers. Accessible from Valtellina for a day trip."),
     ("Santa Caterina", "Quieter resort", "Less crowded alternative to Bormio. Excellent terrain, World Cup downhill pedigree. Great for a focused day on the mountain."),
     ("Backcountry Touring", "Earn your turns", "Alpine touring terrain across the Valtellina valley. Requires touring setup and avalanche safety gear. Smaller groups, bigger rewards."),
-]) + '<p data-gap>Community trips typically run in <strong>January</strong> and <strong>March</strong>.</p>') + section("""
+]) + '<p data-gap>Community trips typically run in <strong>January</strong> and <strong>April</strong>.</p>') + section("""
 <div class="prose">
 <h2>What You Need</h2>
 <ul class="list">
@@ -227,14 +226,13 @@ gather = head("Where We Gather", "Fab Rides doesn&rsquo;t have a headquarters. I
 </div>""") + section("<h2>South East England</h2>" + places([
     ("Queen Elizabeth Country Park", "MTB &middot; Hampshire", "Our local anchor. Flow trails, pump track, and enduro descents. The Friday morning default and regular Sunday venue. Car park meetup, confirmed per ride via Signal."),
     ("Surrey Hills", "MTB &middot; Surrey", "Saturday destination rides. Box Hill, Leith Hill, Holmbury: serious singletrack in beautiful woodland. Carpools arranged from Winchester. One of our most-visited spots."),
-    ("Portland Bill", "Climbing &middot; Dorset", "World-class sport climbing on Dorset limestone. Sea cliffs, hard routes, extraordinary setting. Day trips when conditions are good."),
+    ("Portland", "Climbing &middot; Dorset", "World-class sport climbing on Dorset limestone. Sea cliffs, hard routes, extraordinary setting. Day trips when conditions are good."),
     ("Swanage", "Climbing &middot; Dorset", "Coastal limestone with something for every grade. Beautiful setting, varied climbing. A community favourite for outdoor days."),
-    ("Swanage Crags", "Climbing &middot; Local", "Our local outdoor crags are one hour from Winchester. Short approach through farmland. <strong>Bring proper boots, not low shoes.</strong> Cattle fields and tractor ruts will punish trainers."),
     ("Southampton Climbing Wall", "Indoor &middot; Year-round", "The Monday evening and Friday morning in bad weather default for climbing sessions. Covered, graded for all abilities. Where most new climbers start with us before moving outside."),
 ])) + section("""<h2>The Alps, Valtellina Base</h2>
 <p class="prose">The Alps aren&rsquo;t a destination we visit occasionally. They&rsquo;re part of how Fab Rides thinks and moves. We have a base in Valtellina, near Lake Como, and in the Dolomites, which anchors our seasonal community trips.</p>""" + places([
     ("Valtellina / Lake Como / Val di Mello", "MTB + Climbing", "Over 50 MTB routes in the valley and surrounding peaks. Multi-pitch climbing on proper Alpine limestone. The summer hub for community trips."),
-    ("Valgerola / Val Tartano / Spluga / Maloja", "Skiing", "World-class skiing without the overcrowded resorts. January and May community trips. Ski touring terrain that rivals anywhere in the Alps."),
+    ("Valgerola / Val Tartano / Spluga / Maloja", "Skiing", "World-class skiing without the overcrowded resorts. January and April community trips. Ski touring terrain that rivals anywhere in the Alps."),
     ("Dolomites", "Climbing + MTB + Skiing", "Pale di San Martino. Tre Cime di Lavaredo. Iconic terrain for multi-day climbing and enduro riding. Where the adventures scale up."),
     ("Lake Como", "Cycling + Hiking + Climbing", "Road and gravel riding on legendary terrain. The Piani di Bobbio. The Muro di Sormano. Extraordinary riding, extraordinary views. The Wayfarer Walk and the superb crags of Lecco."),
 ])) + section("""

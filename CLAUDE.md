@@ -40,8 +40,9 @@ or anything Fabrizio has not asked to publish. Private notes live in his Claude 
 - Any new external domain, and any script, iframe, form, embed, analytics or tracking.
 - `site/_redirects` and `site/_headers`.
 - Navigation, page structure, adding or removing pages.
-- Money: fees, contributions, SumUp or other payment links. The copy says "No commercial transactions"
-  and that stays until Fabrizio decides the non-profit structure.
+- Money and structure: fees, contributions, SumUp or other payment links, and any wording about who runs
+  Fab Rides. The site says Fab Rides runs under Fab Campaigns Ltd for now, with its future structure still
+  to be decided; that wording changes only when Fabrizio says so.
 - Removing `noindex` (only at the domain switch).
 - The guardrails themselves: this file, `tools/check.py`, anything in `.github/`. Never loosen a check
   to make your own change pass.
