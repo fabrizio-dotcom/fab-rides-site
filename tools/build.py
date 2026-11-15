@@ -7,11 +7,12 @@ from pathlib import Path
 from places import LINKS, PLACES
 
 OUT = Path(__file__).resolve().parent.parent / "site"
-WP = "https://fab-rides.co.uk/wp-content/uploads"
-# Images still served by the current WordPress site. Before the domain switch,
-# copy them into assets/ and change these three lines.
-LOGO = f"{WP}/2017/01/cropped-FabRides-Bike-Logo-270x270.png"
-HERO = f"{WP}/2017/09/Pale-San-Martino-fav-1-scaled.jpg"
+# Images live in site/assets/img (web copies made from Fabrizio's originals; sources stay off the repo).
+LOGO = "assets/img/logo-bike-96.png"
+HERO = "assets/img/hero-pale-1280.jpg"
+HERO_SRCSET = "assets/img/hero-pale-800.jpg 800w, assets/img/hero-pale-1280.jpg 1280w, assets/img/hero-pale-1920.jpg 1920w"
+# Social previews need a full address; it works once fab-rides.co.uk points to this site.
+OG_IMAGE = "https://fab-rides.co.uk/assets/img/og-pale.jpg"
 FFFN = "https://fabrizio.deliberali.com/fffn"
 EMAIL = "fab@fab-rides.co.uk"
 
@@ -39,10 +40,11 @@ def page(slug, title, desc, body):
 <meta name="robots" content="noindex, nofollow">
 <meta property="og:title" content="{title}">
 <meta property="og:description" content="{desc}">
-<meta property="og:image" content="{HERO}">
+<meta property="og:image" content="{OG_IMAGE}">
 <meta property="og:site_name" content="Fab Rides">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="{LOGO}">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
 <link rel="preload" href="assets/fonts/barlow-condensed-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/site.css?v={CSS_VERSION}">
 </head>
@@ -109,12 +111,14 @@ def section(inner):
 # ---------------- Home ----------------
 home = f"""
 <div class="hero">
-  <img src="{HERO}" alt="Pale di San Martino, Dolomites" fetchpriority="high">
+  <img src="{HERO}" srcset="{HERO_SRCSET}" sizes="100vw" width="1920" height="1081" alt="Three riders descending a grassy ridge below the Pale di San Martino, Dolomites" fetchpriority="high">
   <div class="wrap">
+<div class="hero-copy">
     <h1>We Ride. We Climb. We Explore.</h1>
     <p>A community of outdoor enthusiasts, from Hampshire trails to Dolomite ridgelines, forging authentic relationships through shared adventure.</p>
     <div class="btn-row"><a class="btn" href="join.html">Join the Community &rarr;</a></div>
   </div>
+</div>
 </div>
 """ + section("""
 <div class="prose">
@@ -356,7 +360,7 @@ for slug, (title, desc, body) in PAGES.items():
 /wp-login.php / 301
 """, encoding="utf-8")
 (OUT / "_headers").write_text("""/*
-  Content-Security-Policy: default-src 'none'; style-src 'self'; font-src 'self'; img-src 'self' https://fab-rides.co.uk; base-uri 'none'; form-action 'none'; frame-ancestors 'none'
+  Content-Security-Policy: default-src 'none'; style-src 'self'; font-src 'self'; img-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: camera=(), microphone=(), geolocation=(), interest-cohort=()
