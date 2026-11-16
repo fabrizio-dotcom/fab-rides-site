@@ -311,6 +311,14 @@ join = head("Join the Community", "No membership form. No subscription. No perfo
     ["<strong>Sunday AM</strong>", "Family-friendly ride or run", "QECP or Winchester local", "Families, newer riders"],
     ["<strong>Seasonal trips</strong>", "Alps, Dolomites, international adventures", "Valtellina, South Africa, beyond", "Open to all"],
 ]) + '<p class="note" data-gap>Sessions confirmed mid-week via <a href="https://signal.org">Signal</a>. Get in touch and we&rsquo;ll add you to the group.</p>') + section("""
+<div class="prose">
+<h2>Taking Part</h2>
+<p>Mountain biking, climbing, scrambling and ski touring carry a risk of injury, and in the mountains, worse. Everyone who joins us takes part at their own risk and is responsible for their own safety, kit and decisions. Please be honest with us about your experience and fitness, so we can suggest the right day.</p>
+<p>Fab Rides days are informal. We share skills and experience as friends; none of it is professional guiding or instruction unless we tell you so in writing. Children take part with a parent or guardian who stays responsible for them.</p>
+<p>Make sure you&rsquo;re insured for what you plan to do, including mountain rescue when we&rsquo;re abroad.</p>
+<h3>Costs, kept honest</h3>
+<p>Fab Rides isn&rsquo;t here to make a profit. When a day or a trip has real costs, we share them fairly and openly: travel, accommodation, guides when we use them, and the training that keeps us safe. You&rsquo;ll know what something costs, and what that covers, before you commit. Covering those costs keeps Fab Rides going. Creating value for the people who come along is the reason we do it.</p>
+</div>""") + section("""
 <h2>Who Joins</h2>
 <div class="grid">
   <div class="card"><h4>First-timers</h4><p>Never mountain biked or climbed outdoors? Tell us. We&rsquo;ll match you to the right session.</p></div>

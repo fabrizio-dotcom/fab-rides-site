@@ -248,9 +248,14 @@ PLACES = {
                 "or Chiesa in Valmalenco.",
                 "Touring with us is for confident intermediate ski tourers with their full kit. It isn&rsquo;t for beginners.",
             ]),
-            ("Guides", [
+            ("Guides, and your own responsibility", [
                 "Want a guide? We&rsquo;ll put you in touch with qualified mountain guides: our first choice is Stefano Pizzagalli, "
                 "and we know the other good ones in the valley.",
+                "Or tour with us as part of an experienced group of friends. We aren&rsquo;t mountain guides, and our tours "
+                "aren&rsquo;t guided or instructed. You decide whether the tour, the snow and the terrain are right for you, "
+                "you can turn back at any point, and you are responsible for your own safety.",
+                "You bring your own avalanche kit and know how to use it, and you hold insurance that covers ski touring "
+                "and mountain rescue abroad. We may ask you not to join a tour, or a day&rsquo;s group, that isn&rsquo;t right for you.",
             ]),
             ("Safety", [
                 "We read the avalanche bulletin every day and choose the route around it. We practise transceiver searches together. "
