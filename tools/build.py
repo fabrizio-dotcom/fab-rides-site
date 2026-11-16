@@ -108,6 +108,27 @@ def section(inner):
     return f'<section><div class="wrap">{inner}</div></section>'
 
 
+# ---------------- Winter pause (Nov 2026 to end of Jan 2027) ----------------
+# Set WINTER_PAUSE = False in February 2027 to remove the notice and the table notes.
+WINTER_PAUSE = True
+
+
+def winter_notice(contact_href):
+    if not WINTER_PAUSE:
+        return ""
+    return section(f"""<div class="notice">
+<p class="eyebrow">Until the end of January</p>
+<h2>Rebuilding season</h2>
+<p>Every mountain year has its quiet months, and this winter is ours. Until the end of January, personal and work commitments come first, and we&rsquo;re taking time to recover and rebuild.</p>
+<p>For now there&rsquo;s no regular schedule: climbing sessions stay small, rides are fewer, and the miles are slower. Some days will still happen, in small groups and at short notice. <a href="{contact_href}">Message us</a> to hear what&rsquo;s planned.</p>
+<p><strong>The full rhythm returns in February.</strong></p>
+</div>""")
+
+
+def rhythm_note():
+    return '<p class="note">Paused this winter: our regular rhythm returns in February.</p>' if WINTER_PAUSE else ""
+
+
 # ---------------- Home ----------------
 home = f"""
 <div class="hero">
@@ -120,7 +141,7 @@ home = f"""
   </div>
 </div>
 </div>
-""" + section("""
+""" + winter_notice("join.html#contact") + section("""
 <div class="prose">
 <h2>What We Believe</h2>
 <p>The most profound insights arrive in motion. Not in meeting rooms. Not on screens. Through the physical reality of shared effort: grinding up a climb together, belaying someone through their crux move, reading the mountain before the weather turns.</p>
@@ -132,7 +153,7 @@ home = f"""
   <div class="card"><h3>Ride</h3><p>Mountain biking across Hampshire, Surrey Hills, and the Dolomites. Social first, performance second.</p><a class="more" href="ride.html">Explore &rarr;</a></div>
   <div class="card"><h3>Climb</h3><p>Indoor walls and outdoor crags from Swanage to the Alps. All abilities, no ego.</p><a class="more" href="climb.html">Explore &rarr;</a></div>
   <div class="card"><h3>Ski</h3><p>Winter adventures in Valtellina and the wider Alps. Groomers, touring, fresh lines.</p><a class="more" href="ski.html">Explore &rarr;</a></div>
-</div>""") + section("<h2>Our Rhythm</h2>" + table(["When", "What", "Who"], [
+</div>""") + section("<h2>Our Rhythm</h2>" + rhythm_note() + table(["When", "What", "Who"], [
     ["<strong>Mon, Wed, Fri evenings</strong>", "Indoor climbing at Parthian Southampton", "All levels"],
     ["<strong>Friday mornings</strong>", "Local MTB loop", "Regulars, flexible schedules"],
     ["<strong>Saturdays</strong>", "Main community ride: Surrey Hills, QECP, destination days", "Open to all"],
@@ -277,13 +298,13 @@ gather = head("Where We Gather", "Fab Rides doesn&rsquo;t have a headquarters. I
 </div>""")
 
 # ---------------- Join ----------------
-join = head("Join the Community", "No membership form. No subscription. No performance standard. Just show up, ride your own ride, and see if this feels like your kind of people.") + section("""
+join = head("Join the Community", "No membership form. No subscription. No performance standard. Just show up, ride your own ride, and see if this feels like your kind of people.") + winter_notice("#contact") + section("""
 <div class="prose">
 <h2>How It Works</h2>
 <p>Fab Rides runs on a Signal group (<a href="https://fabrizio.deliberali.com/idea1">we don&rsquo;t use WhatsApp</a>), word of mouth, and the field notes that go out every Friday. When a session is happening, it&rsquo;s announced. You join if you can. Simple.</p>
 
 <h3>The Weekly Rhythm</h3>
-</div>""" + table(["Day", "Activity", "Where", "Who"], [
+</div>""" + rhythm_note() + table(["Day", "Activity", "Where", "Who"], [
     ["<strong>Mon, Wed, Fri evenings</strong>", "Indoor climbing", "Parthian Southampton", "All levels"],
     ["<strong>Friday AM</strong>", "Local MTB loop", "QECP or Winchester", "Flexible schedules, regulars"],
     ["<strong>Saturday</strong>", "Main community ride or crag day", "Surrey Hills, Portland, or local", "Open to all"],
