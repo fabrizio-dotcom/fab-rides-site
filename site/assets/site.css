@@ -148,6 +148,9 @@ td strong { white-space: nowrap; }
 }
 
 [data-gap] { margin-top: 1.25em; }
+.notice { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 24px clamp(18px, 4vw, 32px); max-width: var(--measure); }
+.notice h2 { font-size: clamp(1.7rem, 3.6vw, 2.2rem); }
+.notice p:last-child { margin-bottom: 0; }
 .note { color: var(--muted); font-style: italic; }
 .callout { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 24px; max-width: var(--measure); }
 .contact-line { font-size: 1.15rem; }
