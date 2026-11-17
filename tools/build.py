@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
-"""Builds the Fab Rides static site into ../site/ (shared header/footer, 6 pages + one page per place).
-Place content lives in tools/places.py.
+"""Builds the Fab Rides static site into ../site/ (shared header/footer, 7 pages + one page per place and per dispatch).
+Place content lives in tools/places.py, dispatches in tools/dispatches.py.
 site/assets/site.css is edited by hand; every HTML page is generated from this file."""
 from pathlib import Path
 
+from dispatches import COMING, DISPATCHES, INDEX_DRAFT
 from places import LINKS, PLACES
 
 OUT = Path(__file__).resolve().parent.parent / "site"
@@ -17,7 +18,7 @@ FFFN = "https://fabrizio.deliberali.com/fffn"
 EMAIL = "fab@fab-rides.co.uk"
 
 NAV = [("index.html", "Home"), ("ride.html", "Ride"), ("climb.html", "Climb"), ("ski.html", "Ski"),
-       ("where-we-gather.html", "Where We Gather"), ("join.html", "Join Us")]
+       ("where-we-gather.html", "Where We Gather"), ("dispatches.html", "Dispatches"), ("join.html", "Join Us")]
 
 
 import hashlib
@@ -106,6 +107,13 @@ def table(headers, rows):
 
 def section(inner):
     return f'<section><div class="wrap">{inner}</div></section>'
+
+
+def draft_box(questions):
+    """Dashed box of open questions for Fabrizio. tools/check.py fails while one is on a page."""
+    qs = "".join(f"<li>{q}</li>" for q in questions)
+    return section(f'<div class="draft-note"><p class="eyebrow">Draft for Fab to review</p>'
+                   f'<p>Questions to answer before this page goes live:</p><ul class="list">{qs}</ul></div>')
 
 
 # ---------------- Winter pause (Nov 2026 to end of Jan 2027) ----------------
@@ -376,6 +384,40 @@ def place_page(p):
                     '<a class="btn ghost" href="where-we-gather.html">All places</a></div></div>')
     return body
 
+
+# ---------------- Dispatches ----------------
+def dispatch_card(slug, d):
+    return (f'<div class="card"><span class="tag">{d["tag"]}</span><h4><a href="dispatch-{slug}.html">{d["title"]}</a></h4>'
+            f'<p>{d["summary"]}</p><a class="more" href="dispatch-{slug}.html">Read the dispatch &rarr;</a></div>')
+
+
+def coming_card(name, tag, text):
+    return f'<div class="card"><span class="tag">{tag}</span><h4>{name}</h4><p>{text}</p></div>'
+
+
+dispatches = (head("Dispatches", "Stories, thank-yous and plans sent back from the places we ride, climb and ski.")
+              + draft_box(INDEX_DRAFT)
+              + section("<h2>Latest</h2>" + '<div class="grid">' + "".join(dispatch_card(k, d) for k, d in DISPATCHES.items()) + "</div>")
+              + section("<h2>Coming</h2>" + '<div class="grid">' + "".join(coming_card(*c) for c in COMING) + "</div>"
+                        + f'<p class="note">The full Field Notes go out every Friday: <a href="{FFFN}">Fab&rsquo;s Friday Field Notes</a>.</p>'))
+PAGES["dispatches.html"] = ("Dispatches | Fab Rides", "Stories, thank-yous and plans sent back from the places we ride, climb and ski.", dispatches)
+
+
+def dispatch_page(d):
+    body = (f'<div class="page-head"><div class="wrap"><p class="eyebrow"><a href="dispatches.html">Dispatches</a></p>'
+            f'<h1>{d["title"]}</h1><p>{d["tagline"]}</p></div></div>')
+    if d.get("draft"):
+        body += draft_box(d["draft"])
+    prose = "".join(f"<h2>{h}</h2>" + "".join(f"<p>{x}</p>" for x in paras) for h, paras in d["sections"])
+    body += section(f'<div class="prose">{prose}</div>')
+    body += section('<div class="callout"><h3>Come along</h3><p>Sessions and trips are announced in the Signal group. '
+                    'Get in touch and we&rsquo;ll add you.</p><div class="btn-row"><a class="btn" href="join.html">Join Us &rarr;</a>'
+                    '<a class="btn ghost" href="dispatches.html">All dispatches</a></div></div>')
+    return body
+
+
+for key, d in DISPATCHES.items():
+    PAGES[f"dispatch-{key}.html"] = (f'{d["title"]} | Fab Rides', d["tagline"], dispatch_page(d))
 
 for key, p in PLACES.items():
     PAGES[f"place-{key}.html"] = (f'{p["name"]} | Fab Rides', p["tagline"].replace("&rsquo;", "’"), place_page(p))
