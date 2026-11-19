@@ -165,7 +165,7 @@ home = f"""
 <div class="btn-row"><a class="btn ghost" href="where-we-gather.html">See Where We Gather &rarr;</a><a class="btn" href="join.html">Join the Community &rarr;</a></div>""") + section(f"""
 <div class="prose">
 <h2>Fab Riders</h2>
-<p>Fab Riders is the name for all of us: friends new and old who share this ethos. The community has taken us from Hampshire trails to a stage race in South Africa, from family cyclocross sessions to multi-pitch routes in the Dolomites.</p>
+<p>Fab Riders is the name for all of us: friends new and old who share this ethos. The community has taken us from Hampshire trails to a stage race in South Africa, and on to multi-pitch routes in the Dolomites.</p>
 <p>The adventures feed directly into the writing. Each Friday, experiences from our rides, crags, and mountains find their way into <strong>Fab&rsquo;s Friday Field Notes</strong>.</p>
 <div class="btn-row"><a class="btn ghost" href="{FFFN}">Read Fab&rsquo;s Friday Field Notes &rarr;</a></div>
 </div>""")
